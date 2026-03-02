@@ -1,0 +1,163 @@
+Build a full-stack YouTube Music–style streaming app with NO authentication and NO database.
+
+Tech Stack:
+
+Frontend:
+- React Native CLI (NOT Expo Managed)
+- react-native-track-player (for background + foreground playback)
+- React Navigation (stack + bottom tabs)
+- React Native Reanimated + Gesture Handler
+- Axios for API calls
+- AsyncStorage for local listening history and queue
+- Context API for global player state
+
+Backend:
+- Node.js with Express
+- yt-dlp executed via child_process
+- Scraping logic for YouTube Music search, related, and playlist
+- No MongoDB
+- No authentication
+- In-memory caching using node-cache (5 minute cache)
+
+-------------------------------------
+APP BEHAVIOR
+-------------------------------------
+
+1) App opens directly to Home screen
+- No login or register
+- No user accounts
+
+2) Home Screen
+- Show recommended songs based on:
+    - Last played videoId
+    - Listening history stored in AsyncStorage
+    - Related videos from YouTube Music
+- Call backend:
+    GET /api/recommendations?videoId=
+
+3) Search Screen
+- Scrape music.youtube.com search results
+- Backend endpoint:
+    GET /api/search?q=
+- Return:
+    videoId
+    title
+    artist
+    thumbnail
+    duration
+    listId (if available)
+
+4) Queue System
+- Each song includes:
+    videoId
+    listId (example: RDAMVMxxxx)
+- Backend endpoint:
+    GET /api/queue?videoId=&listId=
+- Return ordered array of songs
+- Maintain queue in PlayerContext
+- Store queue locally in AsyncStorage
+
+5) Streaming Endpoint
+- GET /api/stream/:videoId
+- Backend runs:
+    yt-dlp -f bestaudio -g https://music.youtube.com/watch?v=VIDEOID
+- Return fresh stream URL
+- Never store stream URLs
+- Add retry if 403 occurs
+- Cache response for 5 minutes
+
+-------------------------------------
+PLAYER REQUIREMENTS (CRITICAL)
+-------------------------------------
+
+Use react-native-track-player.
+
+Must support:
+
+- Background playback
+- Android foreground service
+- MediaSession integration
+- Lock screen controls
+- Notification controls
+- Headphone button support
+- Handle audio focus changes
+- Handle interruptions (calls, alarms)
+
+Implement:
+
+- setupPlayer()
+- registerPlaybackService()
+- Capability.Play
+- Capability.Pause
+- Capability.SkipToNext
+- Capability.SkipToPrevious
+
+-------------------------------------
+GESTURE FEATURES
+-------------------------------------
+
+- Swipe up → Expand full player
+- Swipe down → Minimize player
+- Swipe left → Next song
+- Swipe right → Previous song
+- Double tap → Like animation
+- Long press → Add to queue
+
+-------------------------------------
+ANDROID STABILITY REQUIREMENTS
+-------------------------------------
+
+- Implement Android foreground service via TrackPlayer
+- Add permission:
+    android.permission.FOREGROUND_SERVICE
+    android.permission.WAKE_LOCK
+- Show persistent playback notification
+- Target SDK 33+
+- Guide user to disable battery optimization
+- Ensure app is not killed while music is playing
+
+-------------------------------------
+PROJECT STRUCTURE
+-------------------------------------
+
+Backend:
+- controllers/
+- routes/
+- services/ytService.js
+- utils/cache.js
+- server.js
+
+Frontend:
+- screens/
+- components/
+- context/PlayerContext.js
+- services/api.js
+- hooks/usePlayer.js
+- playbackService.js
+
+-------------------------------------
+PERFORMANCE REQUIREMENTS
+-------------------------------------
+
+- FlatList optimization
+- Lazy image loading
+- Debounced search input
+- Proper audio cleanup
+- No memory leaks
+- Prevent multiple simultaneous stream fetches
+
+-------------------------------------
+OUTPUT REQUIREMENTS
+-------------------------------------
+
+Generate:
+
+1) Full backend code
+2) Full frontend code
+3) TrackPlayer setup instructions
+4) Android manifest configuration
+5) How to install yt-dlp
+6) How to run backend
+7) How to run React Native app
+
+Start with backend implementation first.
