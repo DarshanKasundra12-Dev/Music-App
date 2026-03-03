@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 15,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
     color: Colors.text,
   },
   activeTitle: {
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
   },
   artist: {
     fontSize: 13,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textSecondary,
   },
   right: {
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   },
   duration: {
     fontSize: 12,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textMuted,
   },
 });

@@ -127,12 +127,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 14,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: Colors.text,
   },
   artist: {
     fontSize: 12,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textSecondary,
   },
   controls: {

@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 14,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: Colors.textSecondary,
     letterSpacing: 1.5,
     textTransform: 'uppercase',
@@ -330,12 +330,12 @@ const styles = StyleSheet.create({
   },
   trackTitle: {
     fontSize: 22,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: Colors.text,
   },
   trackArtist: {
     fontSize: 16,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textSecondary,
   },
   progressSection: {
@@ -375,7 +375,7 @@ const styles = StyleSheet.create({
   },
   timeText: {
     fontSize: 12,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textMuted,
   },
   controls: {

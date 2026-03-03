@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontFamily: 'Nunito_800ExtraBold',
+    fontWeight: '800',
     color: Colors.text,
   },
   tabBar: {
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
   },
   tabLabel: {
     fontSize: 15,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
     color: Colors.textSecondary,
   },
   tabLabelActive: {
@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
   },
   badgeText: {
     fontSize: 11,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: '#FFFFFF',
   },
   clearBtn: {
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
   },
   clearText: {
     fontSize: 14,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
     color: Colors.accent,
   },
   nowPlayingBar: {
@@ -262,13 +262,13 @@ const styles = StyleSheet.create({
   },
   nowPlayingLabel: {
     fontSize: 10,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: Colors.accent,
     letterSpacing: 1.2,
   },
   nowPlayingTitle: {
     fontSize: 14,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
     color: Colors.text,
   },
   queueItem: {
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
   },
   queueIndexText: {
     fontSize: 13,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textMuted,
   },
   removeBtn: {
@@ -299,12 +299,12 @@ const styles = StyleSheet.create({
   },
   emptyTitle: {
     fontSize: 18,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
     color: Colors.textSecondary,
   },
   emptySubtext: {
     fontSize: 14,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textMuted,
     textAlign: 'center',
     paddingHorizontal: 32,

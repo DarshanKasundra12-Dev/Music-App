@@ -129,6 +129,6 @@ const styles = StyleSheet.create({
   },
   tabLabel: {
     fontSize: 11,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
   },
 });

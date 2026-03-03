@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontFamily: 'Nunito_800ExtraBold',
+    fontWeight: '800',
     color: Colors.text,
   },
   searchBar: {
@@ -214,13 +214,13 @@ const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     fontSize: 16,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.text,
     padding: 0,
   },
   browseTitle: {
     fontSize: 18,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: Colors.text,
     marginBottom: 12,
     paddingHorizontal: 4,
@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
   },
   genreLabel: {
     fontSize: 16,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: '#FFFFFF',
   },
   centerState: {
@@ -252,12 +252,12 @@ const styles = StyleSheet.create({
   },
   stateText: {
     fontSize: 17,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
     color: Colors.textSecondary,
   },
   stateSubtext: {
     fontSize: 14,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textMuted,
     textAlign: 'center',
   },
@@ -270,7 +270,7 @@ const styles = StyleSheet.create({
   },
   retryText: {
     fontSize: 15,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
     color: '#FFFFFF',
   },
 });

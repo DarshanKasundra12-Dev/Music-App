@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   },
   brandName: {
     fontSize: 24,
-    fontFamily: 'Nunito_800ExtraBold',
+    fontWeight: '800',
     color: Colors.text,
     letterSpacing: -0.5,
   },
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     fontSize: 18,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: Colors.text,
     paddingHorizontal: 16,
     paddingTop: 20,
@@ -228,13 +228,13 @@ const styles = StyleSheet.create({
   },
   featuredTitle: {
     fontSize: 20,
-    fontFamily: 'Nunito_700Bold',
+    fontWeight: '700',
     color: Colors.text,
     lineHeight: 24,
   },
   featuredArtist: {
     fontSize: 14,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: 'rgba(255,255,255,0.7)',
   },
   featuredPlay: {
@@ -259,12 +259,12 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     fontSize: 16,
-    fontFamily: 'Nunito_600SemiBold',
+    fontWeight: '600',
     color: Colors.textSecondary,
   },
   emptySubtext: {
     fontSize: 14,
-    fontFamily: 'Nunito_400Regular',
+    fontWeight: '400',
     color: Colors.textMuted,
   },
 });
